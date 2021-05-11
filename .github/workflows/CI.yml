@@ -21,7 +21,7 @@ jobs:
       run: cargo build --release --target="${{ env.TARGET }}"
 
     - name: Run UPX
-      uses: crazy-max/ghaction-upx@v1
+      uses: crazy-max/ghaction-upx@v1.4.0
       with:
         files: target/${{ env.TARGET }}/release/${{ env.ProjectName }}
         args: -9
@@ -48,7 +48,7 @@ jobs:
       run: cargo build --release --target="${{ env.TARGET }}"
 
     - name: Run UPX
-      uses: crazy-max/ghaction-upx@v1
+      uses: crazy-max/ghaction-upx@v1.4.0
       with:
         files: target/${{ env.TARGET }}/release/${{ env.ProjectName }}.exe
         args: --best
